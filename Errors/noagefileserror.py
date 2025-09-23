@@ -1,0 +1,3 @@
+
+class NoAgeFilesError(Exception):
+    pass
