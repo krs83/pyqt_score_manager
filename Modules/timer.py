@@ -1,19 +1,20 @@
 import os
 
 from PyQt5.QtCore import QTimer
-from PyQt5 import QtWidgets, QtMultimedia
+from PyQt5 import QtMultimedia
 from datetime import datetime, timedelta
 
 from Modules.utilities import logging
 from UI.counter_screen import Ui_MainWindow
 
 
-class ScoreTimer(QtWidgets.QWidget):
-    def __init__(self):
+class ScoreTimer:
+    def __init__(self, ui):
         super().__init__()
         self.time = None
-        self.ui = Ui_MainWindow()
-        self.timer = QTimer(self)
+        self.ui = ui
+
+        self.timer = QTimer()
         self.timer.timeout.connect(self.show_time)
         self.set_time = '03:00'
         self.time = datetime.strptime(self.set_time, "%H:%M")

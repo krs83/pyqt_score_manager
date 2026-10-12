@@ -34,3 +34,7 @@ Desktop.ini
 # Env
 .env
 .env.*
+
+#working
+logs.txt
+Categories/

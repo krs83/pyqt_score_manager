@@ -1,5 +1,3 @@
-import openpyxl
-
 from Modules.excel_function import *
 from Modules.flags import Flags
 from Modules.utilities import *
@@ -22,8 +20,6 @@ class TableFor3(ExcelFunc):
 
         # first sample file init
         self.file_path_3 = f'{file_name}{self.age}'
-        self.wb_3 = openpyxl.load_workbook(self.file_path_3)
-        self.t_3 = self.wb_3.worksheets[self.index_age]
 
     def set_table_3(self, age, btn, table, main_key):
         logging(main_key)
@@ -37,8 +33,6 @@ class TableFor3(ExcelFunc):
         self.age = age
         self.btn = btn
         self.file_path_3 = f'{file_name}{age}'
-        self.wb_3 = openpyxl.load_workbook(self.file_path_3)
-        self.t_3 = self.wb_3.worksheets[table]
 
         if self.d_counter3[main_key]['st_inc_3'] == 0:
             self.init_sportsmen_list(table=self.t_3,

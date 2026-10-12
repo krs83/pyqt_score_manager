@@ -1,5 +1,3 @@
-import openpyxl
-
 from Modules.excel_function import *
 from Modules.flags import Flags
 from Modules.utilities import *
@@ -22,8 +20,6 @@ class TableFor4(ExcelFunc):
 
         # first sample file init
         self.file_path_4 = f'{file_name}{self.age}'
-        self.wb_4 = openpyxl.load_workbook(self.file_path_4)
-        self.t_4 = self.wb_4.worksheets[self.index_age]
 
     def set_table_4(self, age, btn, table, main_key):
         logging(main_key)
@@ -37,8 +33,6 @@ class TableFor4(ExcelFunc):
         self.age = age
         self.btn = btn
         self.file_path_4 = f'{file_name}{age}'
-        self.wb_4 = openpyxl.load_workbook(self.file_path_4)
-        self.t_4 = self.wb_4.worksheets[table]
 
         self.check_new_counter(d_counter=self.d_counter4,
                                main_key=main_key,

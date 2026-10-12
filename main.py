@@ -1,14 +1,13 @@
 import sys
 import datetime
 
-from PyQt5 import QtWidgets, QtGui
+from PyQt5 import QtWidgets
 from PyQt5.QtGui import QIcon
-
 
 from Modules.messages import *
 
 # enter point main function
-from Modules.mainWindow import MainWindow
+from UI.mainWindow import MainWindow
 
 
 def main():
@@ -25,8 +24,8 @@ def main():
         check_tables()
         window = MainWindow()
         window.setWindowTitle(f'BJJ SCORE MANAGER ©Все права принадлежат'
-                              f' ОО "Федерация Айкидо и Джиу-Джитсу" {date.year} год')
-        window.setWindowIcon(QIcon(r'.\Images\logo.jpg'))
+                              f' РСОО "Луганская Федерация Джиу-Джитсу" {date.year} год')
+        window.setWindowIcon(QIcon(r'.\Images\logo.png'))
         # window.showMaximized()
         # window.showFullScreen()
         window.show()

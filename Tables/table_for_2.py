@@ -1,5 +1,3 @@
-import openpyxl
-
 from Modules.excel_function import *
 from Modules.flags import Flags
 from Modules.utilities import *
@@ -22,8 +20,6 @@ class TableFor2(ExcelFunc):
 
         # first sample file init
         self.file_path_2 = f'{file_name}{self.age}'
-        self.wb_2 = openpyxl.load_workbook(self.file_path_2)
-        self.t_2 = self.wb_2.worksheets[self.index_age]
 
     def set_table_2(self, age, btn, table, main_key):
         logging(main_key)
@@ -37,8 +33,6 @@ class TableFor2(ExcelFunc):
         self.age = age
         self.btn = btn
         self.file_path_2 = f'{file_name}{age}'
-        self.wb_2 = openpyxl.load_workbook(self.file_path_2)
-        self.t_2 = self.wb_2.worksheets[table]
 
         if self.d_counter2[main_key]['st_inc_2'] == 0:
             self.init_sportsmen_list(table=self.t_2,
@@ -58,7 +52,7 @@ class TableFor2(ExcelFunc):
             self.d_counter2[self.key]['is_lap_2_1'] = False
             self.ui.lap1.setChecked(False)
             self.ui.lap_finish.setChecked(True)
-            self.define_places(table=self.t_2, btn=self.btn, num=2,  is_places2=True)
+            self.define_places(table=self.t_2, btn=self.btn, num=2, is_places2=True)
 
         counter_reset(counter=self.d_counter2, key=self.key, num=2)
 
@@ -144,4 +138,3 @@ class TableFor2(ExcelFunc):
                              d_key=self.key,
                              l_isLap=self.l_is_lap_2,
                              num=2)
-

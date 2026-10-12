@@ -1,0 +1,15 @@
+alembic==1.20.0
+annotated-types==0.8.0
+Mako==1.4.3
+MarkupSafe==3.0.4
+pydantic==2.13.5
+pydantic-settings==2.15.0
+pydantic_core==2.46.5
+PyQt5==5.15.11
+PyQt5-Qt5==5.15.2
+PyQt5_sip==12.20.0
+python-dotenv==1.2.4
+python-qt5==0.1.10
+SQLAlchemy==2.1.4
+typing-inspection==0.4.4
+typing_extensions==4.16.0

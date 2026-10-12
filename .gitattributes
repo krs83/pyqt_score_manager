@@ -1,0 +1,25 @@
+# По умолчанию — LF в репозитории
+* text=auto eol=lf
+
+# Windows-специфичные файлы — CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Бинарные файлы — не трогать
+*.db binary
+*.png binary
+*.jpg binary
+*.ico binary
+*.xlsx binary
+*.wav binary
+
+# Python-файлы — LF
+*.py text eol=lf
+*.pyi text eol=lf
+
+# Markdown, yaml, json — LF
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf

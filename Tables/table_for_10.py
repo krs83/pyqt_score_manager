@@ -1,9 +1,8 @@
-import openpyxl
-
 from Modules.excel_function import *
 from Modules.flags import Flags
 from Modules.utilities import *
 from UI.counter_screen import Ui_MainWindow
+
 
 # TODO: V2 корректно обновляется круг и номер боя только после окончания круга
 
@@ -25,8 +24,6 @@ class TableFor10(ExcelFunc):
 
         # first sample file init
         self.file_path_10 = f'{file_name}{self.age}'
-        self.wb_10 = openpyxl.load_workbook(self.file_path_10)
-        self.t_10 = self.wb_10.worksheets[self.index_age]
 
     def set_table_10(self, age, btn, table, main_key):
         logging(main_key)
@@ -40,7 +37,6 @@ class TableFor10(ExcelFunc):
         self.age = age
         self.btn = btn
         self.file_path_10 = f'{file_name}{age}'
-        self.wb_10 = openpyxl.load_workbook(self.file_path_10)
         self.t_10 = self.wb_10.worksheets[table]
 
         self.check_new_counter(d_counter=self.d_counter10,
